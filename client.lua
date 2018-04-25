@@ -37,3 +37,8 @@ choice.OnSelect = function( panel, index, value )
 end
 end
 concommand.Add( "open_menu", gayMenu)
+
+hook.Add("PlayerSay", "OpenDerma", function(msg, ply)
+  if msg == "OpenDerma" then
+    gayMenu()
+end)
