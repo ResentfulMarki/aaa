@@ -38,7 +38,7 @@ end
 end
 concommand.Add( "open_menu", gayMenu)
 
-hook.Add("PlayerSay", "OpenDerma", function(msg, ply)
-  if msg == "OpenDerma" then
-    gayMenu()
-end)
+function gayMenu()
+  net.Start("OD")
+  net.SendToServer()
+end
